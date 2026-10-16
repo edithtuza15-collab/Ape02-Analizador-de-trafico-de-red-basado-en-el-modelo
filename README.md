@@ -1,5 +1,5 @@
-# Ape02-Analizador-de-trafico-de-red-basado-en-el-modelo
-# Analizador de tráfico de red basado en el modelo TCP/IP
+
+# APE02 Analizador de tráfico de red basado en el modelo TCP/IP
 Aplicación de consola en Java (8 o superior) que lee paquetes de red simulados desde `paquetes.txt`, separa sus cabeceras por capa (ETH, IP, TCP, UDP o ICMP, y APP), las muestra con claridad y genera un resumen estadístico.
 
 Proyecto de la guía práctica APE2 de Introducción a Redes, Universidad Técnica de Ambato, Carrera de Software, Nivel III, Paralelo B. Docente: Ing. Daniel Maldonado-Ruiz, Ph.D.
