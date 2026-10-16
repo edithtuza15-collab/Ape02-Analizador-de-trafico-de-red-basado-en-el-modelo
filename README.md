@@ -11,8 +11,6 @@ Proyecto de la guía práctica APE2 de Introducción a Redes, Universidad Técni
 - Ramírez Tigse Ruth Betzabeth
 - Tuza Quinatoa Edith Noemi
 
-Repositorio: Pendiente de crear
-
 ## Formato de cada línea
 
 ```
