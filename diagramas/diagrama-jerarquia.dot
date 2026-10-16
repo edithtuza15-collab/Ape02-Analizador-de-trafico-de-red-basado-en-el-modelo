@@ -1,0 +1,14 @@
+digraph G {
+ rankdir=BT; fontname="DejaVu Sans"; nodesep=0.3; ranksep=0.5;
+ node [shape=record, fontname="DejaVu Sans", fontsize=13, style=filled, fillcolor="#f7f7f7"];
+ edge [fontname="DejaVu Sans", fontsize=12];
+ Cabecera [label="{«abstract»\nCabecera|# nombre : String\n# campos : Map|# validar()\n+ describir() : String}", fillcolor="#e8f0fe"];
+ CabTrans [label="{«abstract»\nCabeceraTransporte|+ usaPuertos()\n+ getPuertoOrigen()\n+ getPuertoDestino()\n+ getFlags()}", fillcolor="#e8f0fe"];
+ Eth [label="{CabeceraEthernet}"]; IP [label="{CabeceraIP}"]; APP [label="{CabeceraAPP|+ esConsulta()\n+ esRespuesta()}"];
+ TCP [label="{CabeceraTCP}"]; UDP [label="{CabeceraUDP}"]; ICMP [label="{CabeceraICMP}"];
+ Paquete [label="{Paquete|- numeroLinea : int|+ describir() : String}", fillcolor="#fff4e0"];
+ CabTrans -> Cabecera [arrowhead=empty]; Eth -> Cabecera [arrowhead=empty];
+ IP -> Cabecera [arrowhead=empty]; APP -> Cabecera [arrowhead=empty];
+ TCP -> CabTrans [arrowhead=empty]; UDP -> CabTrans [arrowhead=empty]; ICMP -> CabTrans [arrowhead=empty];
+ Paquete -> Cabecera [arrowhead=none, arrowtail=diamond, dir=back, label=" 4 cabeceras\n (ETH, IP, transporte, APP)"];
+}

@@ -1,0 +1,19 @@
+digraph G {
+ rankdir=TB; fontname="DejaVu Sans"; nodesep=0.4; ranksep=0.55;
+ node [shape=record, fontname="DejaVu Sans", fontsize=13, style=filled, fillcolor="#e6f4ea"];
+ edge [fontname="DejaVu Sans", fontsize=12, arrowhead=vee];
+ Loc [label="{LocalizadorArchivo|+ localizar() : Path}"];
+ Lector [label="{LectorArchivo|+ leerLineas() : List\<String\>}"];
+ Analizador [label="{AnalizadorPaquetes|+ analizar(List)\n+ analizarLinea(int, String)}"];
+ Estad [label="{Estadisticas|+ contarTransporte()\n+ masFrecuentes()\n+ buscarPorIp()}"];
+ Gen [label="{GeneradorReporte|+ detalle()\n+ resumen()\n+ reporteCompleto()\n+ exportar()}"];
+ Paquete [label="{Paquete}", fillcolor="#fff4e0"];
+ Excep [label="{PaqueteInvalidoException}", fillcolor="#fde8e8"];
+ Loc -> Lector [label=" ruta"];
+ Lector -> Analizador [label=" líneas"];
+ Analizador -> Paquete [label=" crea", style=dashed];
+ Analizador -> Excep [label=" captura", style=dashed];
+ Estad -> Paquete [label=" consulta", style=dashed];
+ Gen -> Estad [label=" usa"];
+ Gen -> Analizador [label=" incidencias", style=dashed];
+}
