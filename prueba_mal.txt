@@ -1,0 +1,11 @@
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=51514,dport=80,seq=1001,ack=2001,flags=PSH-ACK}|APP{proto=HTTP,data=GET_/index.html}
+
+esto no es un paquete
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=abc,proto=TCP}|TCP{sport=1,dport=80,seq=1,ack=1,flags=SYN}|APP{proto=HTTP,data=X}
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=99999,dport=80,seq=1,ack=1,flags=SYN}|APP{proto=HTTP,data=X}
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=UDP}|TCP{sport=1,dport=80,seq=1,ack=1,flags=SYN}|APP{proto=HTTP,data=X}
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=300.1.1.1,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=1,dport=80,seq=1,ack=1,flags=SYN}|APP{proto=HTTP,data=X}
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=1,dport=80,seq=1,ack=1,flags=SYN}
+ETH{src=AA:BB:CC:DD:EE:01,dst=FF:EE:DD:CC:BB:01,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=x,dport=80,seq=1,ack=1,flags=SYN}|APP{proto=HTTP,data=X}
+ETH{src=AA:BB:CC:DD:EE:02,dst=FF:EE:DD:CC:BB:02,type=IPv4}|IP{src=192.168.1.10,dst=93.184.216.34,ttl=64,proto=TCP}|TCP{sport=51515,dport=80,seq=1002,ack=2002,flags=ACK}|APP{proto=HTTP,data=GET_/images/logo.png}
+ETH{src=AA:BB:CC:DD:EE:03,dst=FF:EE:DD:CC:BB:03,type=IPv4}|IP{src=192.168.1.11,dst=142.250.184.14,ttl=63,proto=TCP}|TCP{sport=51516,dport=443,seq=1010,ack=2010,flags=SYN}|APP{proto=TLS,data=CLIENT_HELLO}
